@@ -23,5 +23,6 @@ Your output answer is guaranteed to be fitted in a 32-bit integer.
  */
 public class FindTargetSumWays {
     public int findTargetSumWays(int[] nums, int S) {
+        return 0;
     }
 }
