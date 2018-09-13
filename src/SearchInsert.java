@@ -45,7 +45,4 @@ public class SearchInsert {
         }
         return start;
     }
-    public static void main(String[] args){
-        new SearchInsert().searchInsert(new int[]{1,3},2);
-    }
 }
