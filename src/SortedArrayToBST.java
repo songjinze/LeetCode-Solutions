@@ -17,6 +17,27 @@
  */
 public class SortedArrayToBST {
     public TreeNode sortedArrayToBST(int[] nums) {
-        return null;
+        if(nums.length==0){
+            return null;
+        }
+        TreeNode res=builder(nums,0,nums.length-1);
+
+        return res;
     }
+    private TreeNode builder(int[] nums,int start,int end){
+        if(start>end){
+            return null;
+        }
+        int mid=(start+end)/2;
+        TreeNode res=new TreeNode(nums[mid]);
+        res.left=builder(nums,start,mid-1);
+        res.right=builder(nums,mid+1,end);
+        return res;
+    }
+}
+class TreeNode{
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x){val=x;}
 }
